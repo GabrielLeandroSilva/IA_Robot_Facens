@@ -172,6 +172,22 @@ public class AI : MonoBehaviour
         return true;
     }
 
+    [Task]
+    public bool IsHealthLessThan(float health)
+    {
+        //Metodo para informar se a vida está menor que a sugerida
+        return this.health < health;
+    }
+
+    [Task]
+    public bool Explode()
+    {
+        //Metodo para destruir o Tanque
+        Destroy(healthBar.gameObject);
+        Destroy(this.gameObject);
+        return true;
+    }
+
 
 }
 
